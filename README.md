@@ -4,6 +4,58 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/luilliarcec/laravel-ecuador-locations)](https://packagist.org/packages/luilliarcec/laravel-ecuador-locations)
 [![GitHub license](https://img.shields.io/github/license/luilliarcec/laravel-ecuador-locations.svg)](https://github.com/luilliarcec/laravel-ecuador-locations/blob/master/LICENSE.md)
 
+## Installation
+
+You can install the package via composer:
+
+```bash
+composer require luilliarcec/laravel-ecuador-locations
+```
+
+Now publish the migration file into your app's migrations directory, by running the following command:
+
+```bash
+php artisan vendor:publish --provider="Luilliarcec\EcuadorLocations\EcuadorLocationsServiceProvider"
+```
+
+```bash
+php artisan migrate
+```
+
+### Usage
+
+```php
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use Luilliarcec\EcuadorLocations\Seeders\CantonSeeder;
+use Luilliarcec\EcuadorLocations\Seeders\ProvinciaSeeder;
+use Luilliarcec\EcuadorLocations\Models\Canton;
+use Luilliarcec\EcuadorLocations\Models\Provincia;
+
+class DatabaseSeeder extends Seeder
+{
+    public function run()
+    {
+        if (Provincia::doesntExist()) {
+            $this->call(ProvinciaSeeder::class);
+        }
+
+        if (Canton::doesntExist()) {
+            $this->call(CantonSeeder::class);
+        }
+
+        // ...
+    }
+}
+```
+
+```bash
+php artisan db:seed
+```
+
 ### Testing
 
 ``` bash
