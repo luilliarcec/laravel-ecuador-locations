@@ -26,7 +26,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Luilliarcec\\EcuadorLocations\\": "src"
+            "Luilliarcec\\EcuadorLocations\\": "src",
+            "Luilliarcec\\EcuadorLocations\\Database\\": "database"
         }
     },
     "autoload-dev": {
