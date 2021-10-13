@@ -8,5 +8,7 @@ class Provincia extends Model
 {
     protected string $table = 'provincias';
 
+    public bool $timestamps = false;
+
     protected array $guarded = [];
 }

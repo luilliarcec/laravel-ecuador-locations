@@ -1,6 +1,6 @@
 <?php
 
-namespace Luilliarcec\EcuadorLocations\Database\Seeders;
+namespace Luilliarcec\EcuadorLocations\Seeders;
 
 use Illuminate\Database\Seeder;
 use Luilliarcec\EcuadorLocations\Models\Provincia;
@@ -9,7 +9,7 @@ class ProvinciaSeeder extends Seeder
 {
     public function run()
     {
-        Provincia::insert(
+        Provincia::insert([
             ['id' => 1, 'code' => '01', 'name' => 'AZUAY'],
             ['id' => 2, 'code' => '02', 'name' => 'BOLÍVAR'],
             ['id' => 3, 'code' => '03', 'name' => 'CAÑAR'],
@@ -34,6 +34,6 @@ class ProvinciaSeeder extends Seeder
             ['id' => 22, 'code' => '22', 'name' => 'ORELLANA'],
             ['id' => 23, 'code' => '23', 'name' => 'SANTO DOMINGO DE LOS TSÁCHILAS'],
             ['id' => 24, 'code' => '24', 'name' => 'SANTA ELENA'],
-        );
+        ]);
     }
 }

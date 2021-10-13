@@ -8,5 +8,7 @@ class Canton extends Model
 {
     protected string $table = 'cantones';
 
+    public bool $timestamps = false;
+
     protected array $guarded = [];
 }

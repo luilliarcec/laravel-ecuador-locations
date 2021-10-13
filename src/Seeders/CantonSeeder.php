@@ -1,6 +1,6 @@
 <?php
 
-namespace Luilliarcec\EcuadorLocations\Database\Seeders;
+namespace Luilliarcec\EcuadorLocations\Seeders;
 
 use Illuminate\Database\Seeder;
 use Luilliarcec\EcuadorLocations\Models\Canton;
@@ -9,7 +9,7 @@ class CantonSeeder extends Seeder
 {
     public function run()
     {
-        Canton::insert(
+        Canton::insert([
             ['id' => 1, 'provincia_id' => 1, 'code' => '0101', 'name' => 'CUENCA'],
             ['id' => 2, 'provincia_id' => 1, 'code' => '0102', 'name' => 'GIRÓN'],
             ['id' => 3, 'provincia_id' => 1, 'code' => '0103', 'name' => 'GUALACEO'],
@@ -231,6 +231,6 @@ class CantonSeeder extends Seeder
             ['id' => 219, 'provincia_id' => 24, 'code' => '2401', 'name' => 'SANTA ELENA'],
             ['id' => 220, 'provincia_id' => 24, 'code' => '2402', 'name' => 'LA LIBERTAD'],
             ['id' => 221, 'provincia_id' => 24, 'code' => '2403', 'name' => 'SALINAS'],
-        );
+        ]);
     }
 }
