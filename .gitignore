@@ -1,0 +1,25 @@
+build
+composer.lock
+docs
+vendor
+coverage
+.phpunit.result.cache
+
+### Custom ###
+/.idea/*
+*.cache
+.php_cs.cache
+*.BACKUP
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+*.orig
+*.iws
+*.iml
+*.ipr
+/tools/php-cs-fixer/vendor
