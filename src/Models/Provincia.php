@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Provincia extends Model
 {
-    protected string $table = 'provincias';
+    protected $table = 'provincias';
 
-    public bool $timestamps = false;
+    public $timestamps = false;
 
-    protected array $guarded = [];
+    protected $guarded = [];
 }

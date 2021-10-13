@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Canton extends Model
 {
-    protected string $table = 'cantones';
+    protected $table = 'cantones';
 
-    public bool $timestamps = false;
+    public $timestamps = false;
 
-    protected array $guarded = [];
+    protected $guarded = [];
 }
