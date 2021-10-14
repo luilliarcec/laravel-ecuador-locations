@@ -11,4 +11,9 @@ class Canton extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
+    public function provincia()
+    {
+        return $this->belongsTo(Provincia::class, 'provincia_id');
+    }
 }

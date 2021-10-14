@@ -11,4 +11,9 @@ class Provincia extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
+    public function cantones()
+    {
+        return $this->hasMany(Canton::class, 'provincia_id');
+    }
 }
